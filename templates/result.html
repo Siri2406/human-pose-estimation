@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pose Detection Result</title>
+    <link rel="stylesheet" href="../static/result.css">
+</head>
+<body>
+    <h1>Pose Detection Result</h1>
+    
+    {% if image %}
+        <h3>Image Result:</h3>
+        <img src="{{ url_for('uploaded_file', filename=image) }}" alt="Pose Detection Result">
+    {% endif %}
+
+    {% if video %}
+        <h3>Video Estimation Completed</h3>
+    {% endif %}
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Input Page</title>
+    <link rel="stylesheet" type="text/css" href="../static/input.css">
+  
+  </head>
+
+  <body>
+    
+    <div class="backicon">
+      <a href="/home">
+      <ion-icon name="home-outline"></ion-icon></a>
+    </div>
+
+    
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <div class="file">
+      <input type="file" id="file" name="file">
+      <label for="file"> <i class="fa-solid fa-upload"></i>Upload File</label>
+    </div>
+    <div class="maincontainer">    
+      <div class="thecard1">
+
+        <div class="thefront"><h1 data-type="Estimation Through Webcam"></h1><br><br><br>
+          <p>Human pose detection using a webcam involves real-time identification and tracking of key points on a person's body captured by the webcam feed.</p>
+        </div>
+
+      <div class="theback">
+          <h2>Pose Estimation Using Webcam</h2><br><br><br>
+          <div class="img">
+          </div>
+          <a><span>
+          <input type="submit" value="Webcam" name="webcam">
+        </span></a>
+          
+       
+
+      </div>
+      </div>
+      <div class="thecard2">
+
+        <div class="thefront"><h1 data-type="Estimation Through image"></h1><br><br>
+          <p>Human pose detection using image refers to the process of locating and identifying key points on a person's body, such as joints and limbs, within an image and these points represent the detected positions</p>
+        </div>
+          
+        <div class="theback"><h2>Pose Estimation Using Image</h2>
+          <div class="img">
+        </div>
+        <a><span>
+          <input type="submit" value="Image" name="Image">
+        </span></a>
+          
+        
+
+        </div>
+      
+      </div>
+      <div class="thecard3">
+        <div class="thefront"><h1 data-type="Estimation Through video"></h1><br><br>
+          <p>
+            Human Pose Detection Using Video involves utilizing computer vision techniques to analyze video data and identify the poses of human subjects in real-time or recorded footage.
+          </p>
+        </div>
+        <div class="theback">
+          <h2>Pose Estimation Using Video</h2>
+          <div class="img">
+          </div> 
+          <a><span>
+            <input type="submit" value="Video" name="Video">
+          </span></a>     
+        </div>
+      
+      </div>
+    </div>
+  </form>
+    
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+  function validateFile() {
+    const fileInput = document.getElementById('file');
+    const file = fileInput.files[0];
+    const selectedButton = document.querySelector('input[type="submit"][name]:focus');
+
+    
+
+    const fileType = file.type;
+    const selectedName = selectedButton.name;
+
+    if (selectedName === "Image" && !fileType.startsWith("image/")) {
+      alert("Wrong file format! Please upload an image.");
+      return false;
+    }
+
+    if (selectedName === "Video" && !fileType.startsWith("video/")) {
+      alert("Wrong file format! Please upload a video.");
+      return false;
+    }
+
+    
+    return true;
+  }
+
+  // Attach the validation function to the form's submit event
+  document.querySelector('form').onsubmit = validateFile;
+</script>
+</body>
+
+</html>

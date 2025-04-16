@@ -1,0 +1,33 @@
+body {
+    background-color: rgba(0, 0, 0, 0.7); /* Replace with the input page's background color if different */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: white;
+    text-align: center; /* Center the title */
+}
+
+img {
+    max-width: 50%; /* Adjust size as needed */
+    max-height: 50%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+video {
+    max-width: 50%; /* Adjust size as needed */
+    max-height: 50%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+h3{
+    color: white;
+}
